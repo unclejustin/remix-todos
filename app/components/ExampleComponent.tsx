@@ -3,9 +3,5 @@ type ComponentProps = {
 }
 
 export default function ExampleComponent({ message }: ComponentProps) {
-	return (
-		<h1 data-testid="example-element">
-			{message ? message : 'Default message.'}
-		</h1>
-	)
+	return <h1>{message ? message : 'Default message.'}</h1>
 }
