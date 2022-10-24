@@ -1,7 +1,5 @@
 import '@testing-library/jest-dom'
 import { describe, expect, it } from 'vitest'
-import { render, screen } from '../utils'
-import ExampleComponent from '~/components/ExampleComponent'
 
 /**
  * Example tests.
@@ -15,15 +13,5 @@ describe('Example unit tests.', () => {
 			response.json(),
 		)
 		expect(data).not.toBeNull()
-	})
-
-	it('Should have "Default message." as text content.', async () => {
-		render(<ExampleComponent message="" />)
-		expect(screen.getByRole('heading')).toHaveTextContent('Default message.')
-	})
-
-	it('Should have "Vitest message." as text content.', async () => {
-		render(<ExampleComponent message="Vitest message." />)
-		expect(screen.getByRole('heading')).toHaveTextContent('Vitest message.')
 	})
 })
