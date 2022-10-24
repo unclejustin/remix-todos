@@ -2,8 +2,6 @@ import '@testing-library/jest-dom'
 import { describe, expect, it } from 'vitest'
 import { render, screen } from '../utils'
 import ExampleComponent from '~/components/ExampleComponent'
-import { server } from 'mocks'
-import { rest } from 'msw'
 
 /**
  * Example tests.
