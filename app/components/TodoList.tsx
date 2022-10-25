@@ -1,5 +1,10 @@
+type Todo = {
+	todo: string
+	completed: boolean
+}
+
 interface TodoListProps {
-	todos: unknown[]
+	todos: Todo[]
 }
 
 export default function TodoList({ todos }: TodoListProps) {
@@ -9,10 +14,19 @@ export default function TodoList({ todos }: TodoListProps) {
 
 	return (
 		<ul>
-			<li>Complete item</li>
-			<li>Incomplete item</li>
+			{todos.map((todo) => (
+				<TodoListItem key={todo.todo} todo={todo} />
+			))}
 		</ul>
 	)
+}
+
+interface TodoListItemProps {
+	todo: Todo
+}
+
+function TodoListItem({ todo }: TodoListItemProps) {
+	return <li>{todo.todo}</li>
 }
 
 function EmptyTodoList() {
