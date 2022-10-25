@@ -18,7 +18,7 @@ export const meta: MetaFunction = () => {
 	return {
 		viewport: 'width=device-width, initial-scale=1',
 		charset: 'utf-8',
-		title: 'Remix Playwright!',
+		title: 'Remix Todos',
 		description:
 			'A testing focused Remix Stack, that integrates E2E & Unit testing with Playwright, Vitest, MSW and Testing Library. Driven by Prisma ORM. Deploys to Fly.io',
 		keywords:
