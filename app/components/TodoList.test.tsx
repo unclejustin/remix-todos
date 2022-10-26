@@ -13,8 +13,20 @@ describe('TodoList', () => {
 		render(
 			<TodoList
 				todos={[
-					{ todo: 'Complete item', completed: true },
-					{ todo: 'Incomplete item', completed: false },
+					{
+						id: 'complete',
+						todo: 'Complete item',
+						completed: true,
+						created: '',
+						updated: '',
+					},
+					{
+						id: 'incomplete',
+						todo: 'Incomplete item',
+						completed: false,
+						created: '',
+						updated: '',
+					},
 				]}
 			/>,
 		)

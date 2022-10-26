@@ -1,12 +1,7 @@
-type Todo = {
-	todo: string
-	completed: boolean
-}
+import type { useLoaderData } from '@remix-run/react'
+import type { Todos } from '~/domains/todos.server'
 
-interface TodoListProps {
-	todos: Todo[]
-}
-
+type TodoListProps = { todos: ReturnType<typeof useLoaderData<Todos>> }
 export default function TodoList({ todos }: TodoListProps) {
 	if (todos.length === 0) {
 		return <EmptyTodoList />
@@ -21,10 +16,8 @@ export default function TodoList({ todos }: TodoListProps) {
 	)
 }
 
-interface TodoListItemProps {
-	todo: Todo
-}
-
+type Todo = TodoListProps['todos'][0]
+type TodoListItemProps = { todo: Todo }
 function TodoListItem({ todo }: TodoListItemProps) {
 	return <li>{todo.todo}</li>
 }
