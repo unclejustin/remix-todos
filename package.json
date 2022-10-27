@@ -20,9 +20,11 @@
 		"lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
 		"test": "vitest",
 		"test:cov": "vitest --coverage",
-		"test:e2e:dev": "playwright test",
+		"test:e2e:dev": "npm run test:migrate && npm run test:seed && playwright test",
 		"pretest:e2e:run": "npm run build",
 		"test:e2e:run": "cross-env CI=true playwright test",
+		"test:migrate": "cross-env DATABASE_URL=file:test.db prisma migrate dev",
+		"test:seed": "cross-env DATABASE_URL=file:test.db prisma db seed",
 		"typecheck": "tsc -b",
 		"validate": "run-p \"test -- --run\" lint typecheck test:e2e:run"
 	},
