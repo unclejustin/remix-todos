@@ -10,7 +10,7 @@ test('Homepage should list todos', async ({ page }) => {
 		list.find((item) => item.textContent === 'Complete item'),
 	)
 	const incompleteItem = await listitems.evaluateAll((list) =>
-		list.find((item) => item.textContent === 'Complete item'),
+		list.find((item) => item.textContent === 'Incomplete item'),
 	)
 
 	await expect(completeItem).not.toBeUndefined()

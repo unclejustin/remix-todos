@@ -20,6 +20,8 @@ node_modules
 # Prisma.
 /prisma/data.db
 /prisma/data.db-journal
+/prisma/test.db
+/prisma/test.db-journal
 
 # Tests.
 /test-results/
