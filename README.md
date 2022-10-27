@@ -97,3 +97,9 @@ This template has pre-configured prettier settings on `.package-json`. Feel free
 
 If you found the template useful, support it with a [Star ⭐](https://github.com/dev-xo/stripe-stack)<br />
 It helps the repository grow and gives us motivation to keep working on it. Thanks you!
+
+## 🔧 Development
+
+For "normal" dev just run `npm run dev` and have at it. However it is better to "test as you go". Run `npm run dev` in one tab
+and `npm run pw:dev` in another. This will open up playwright with the inspector enabled. As you develop a feature, try using
+playwright to make all the commands. Then save those into an integration test.
